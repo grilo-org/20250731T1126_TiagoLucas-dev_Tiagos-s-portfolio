@@ -1,15 +1,28 @@
 import Image from 'next/image';
+import { List } from "@phosphor-icons/react/dist/ssr";
+
 
 export default function Home() {
     return (
-        <div>
-            <header>
-                <h2>
+        <div className=" mr-10  ml-10 ">
+            <header className="flex items-center justify-between  mt-6  mb-6">
+                <h2
+                    className="text-xl font-semibold
+"
+                >
                     <a href="/">Tiago Lucas.dev</a>
                 </h2>
 
-                <nav>
-                    <menu>
+
+                <menu>
+                    <List size={32} color="black" weight="bold" />
+                </menu>
+
+
+                <nav className="hidden">
+                    <menu className="flex 
+
+">
                         <li>Sobre</li>
                         <li>Experiencia</li>
                         <li>Contato</li>
@@ -19,19 +32,22 @@ export default function Home() {
 
             <main>
                 <div>
-                    <div>
-                        <div>React | Vite | Next</div>
+                    <div className="mb-[4.5rem]">
+                        <div className="font-semibold mb-6">React | Vite | Next</div>
 
-                        <h1>&lt; Desenvolvedor /&gt;</h1>
+                        <h1 className="text-3xl font-semibold italic mb-6 ">&lt; Desenvolvedor /&gt;</h1>
 
-                        <p>Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e metodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
+                        <p className="text-base mb-12
+">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e metodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
 
-                        <button>Contato</button>
+                        <button className="bg-black pt-4 pr-12 pb-4 pl-12 text-white 
+
+">Contato</button>
                     </div>
                     <Image src="/globe.svg" alt="Picture of the author" width={250} height={500} />
                 </div>
 
-                <div>
+                <div className="text-base mt-12">
                     <section>
                         <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
                         <Image src="/javascript.svg" alt="Picture of the author" width={100} height={100} />
