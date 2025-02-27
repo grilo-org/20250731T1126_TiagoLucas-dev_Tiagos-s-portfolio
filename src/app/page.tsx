@@ -1,8 +1,19 @@
 import Image from 'next/image';
 import { List } from "@phosphor-icons/react/dist/ssr";
-
+import Slider from './components/Slider';
 
 export default function Home() {
+
+  const sliderImages = [
+      <Image src="/python.svg" alt="Python" width={125} height={125} />,
+      <Image src="/javascript.svg" alt="JavaScript" width={125} height={125} />,
+      <Image src="/nextjs-icon.svg" alt="Next.js" width={125} height={125} />,
+      <Image src="/react.svg" alt="React" width={125} height={125} />,
+      <Image src="/tailwindCss.svg" alt="React" width={125} height={125} />,
+      <Image src="/python.svg" alt="Python" width={125} height={125} />,
+      <Image src="/styled-components.svg" alt="Styled Components" width={125} height={125} />
+  ];
+
     return (
         <div className=" mr-10  ml-10 ">
             <header className="flex items-center justify-between  mt-6  mb-6">
@@ -38,22 +49,18 @@ export default function Home() {
                         <h1 className="text-3xl font-semibold italic mb-6 ">&lt; Desenvolvedor /&gt;</h1>
 
                         <p className="text-base mb-12
-">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e metodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
+">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
 
                         <button className="bg-black pt-4 pr-12 pb-4 pl-12 text-white 
 
 ">Contato</button>
                     </div>
-                    <Image src="/globe.svg" alt="Picture of the author" width={250} height={500} />
+                    <Image src="/globe.svg" alt="Picture of the author" width={250} height={500} className="m-0"/>
                 </div>
 
                 <div className="text-base mt-12">
-                    <section>
-                        <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
-                        <Image src="/javascript.svg" alt="Picture of the author" width={100} height={100} />
-                        <Image src="/nextjs-icon.svg" alt="Picture of the author" width={125} height={125} />
-                        <Image src="/react.svg" alt="Picture of the author" width={100} height={100} />
-                        <Image src="/styled-components.svg" alt="Picture of the author" width={100} height={100} />
+                    <section className="flex ">
+                        <Slider images={sliderImages} />
                     </section>
                 </div>
 
