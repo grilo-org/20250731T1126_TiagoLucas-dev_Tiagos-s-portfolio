@@ -1,18 +1,17 @@
 import Image from 'next/image';
-import { List } from "@phosphor-icons/react/dist/ssr";
+import { List } from '@phosphor-icons/react/dist/ssr';
 import Slider from './components/Slider';
 
 export default function Home() {
-
-  const sliderImages = [
-      <Image src="/python.svg" alt="Python" width={125} height={125} />,
-      <Image src="/javascript.svg" alt="JavaScript" width={125} height={125} />,
-      <Image src="/nextjs-icon.svg" alt="Next.js" width={125} height={125} />,
-      <Image src="/react.svg" alt="React" width={125} height={125} />,
-      <Image src="/tailwindCss.svg" alt="React" width={125} height={125} />,
-      <Image src="/python.svg" alt="Python" width={125} height={125} />,
-      <Image src="/styled-components.svg" alt="Styled Components" width={125} height={125} />
-  ];
+    const sliderImages = [
+        <Image src="/python.svg" alt="Python" width={125} height={125} />,
+        <Image src="/javascript.svg" alt="JavaScript" width={125} height={125} />,
+        <Image src="/nextjs-icon.svg" alt="Next.js" width={125} height={125} />,
+        <Image src="/react.svg" alt="React" width={125} height={125} />,
+        <Image src="/tailwindCss.svg" alt="React" width={125} height={125} />,
+        <Image src="/python.svg" alt="Python" width={125} height={125} />,
+        <Image src="/styled-components.svg" alt="Styled Components" width={125} height={125} />
+    ];
 
     return (
         <div className=" mr-10  ml-10 ">
@@ -24,16 +23,16 @@ export default function Home() {
                     <a href="/">Tiago Lucas.dev</a>
                 </h2>
 
-
                 <menu>
                     <List size={32} color="black" weight="bold" />
                 </menu>
 
-
                 <nav className="hidden">
-                    <menu className="flex 
+                    <menu
+                        className="flex 
 
-">
+"
+                    >
                         <li>Sobre</li>
                         <li>Experiencia</li>
                         <li>Contato</li>
@@ -48,14 +47,22 @@ export default function Home() {
 
                         <h1 className="text-3xl font-semibold italic mb-6 ">&lt; Desenvolvedor /&gt;</h1>
 
-                        <p className="text-base mb-12
-">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
+                        <p
+                            className="text-base mb-12
+"
+                        >
+                            Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋
+                        </p>
 
-                        <button className="bg-black pt-4 pr-12 pb-4 pl-12 text-white 
+                        <button
+                            className="bg-black pt-4 pr-12 pb-4 pl-12 text-white 
 
-">Contato</button>
+"
+                        >
+                            Contato
+                        </button>
                     </div>
-                    <Image src="/globe.svg" alt="Picture of the author" width={250} height={500} className="m-0"/>
+                    <Image src="/globe.svg" alt="Picture of the author" width={250} height={500} className="m-0" />
                 </div>
 
                 <div className="text-base mt-12">
@@ -64,12 +71,32 @@ export default function Home() {
                     </section>
                 </div>
 
-                <div>
-                    <section>
-                        <h2>Sobre mim</h2>
-                        <p>Lorem Ipsum</p>
+                <div className="text-base mt-12">
+                    <section
+                        className=" flex items-center
+ flex-col
+"
+                    >
+                        <h2
+                            className="text-3xl 
+
+ font-semibold"
+                        >
+                            Sobre mim
+                        </h2>
+                        <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
+
+                        <div
+                            className="bg-gray-100
+"
+                        >
+                            <p className="pl-4 pr-4 text-center">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                                make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                                containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                        </div>
                     </section>
-                    <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
                 </div>
 
                 <div>
