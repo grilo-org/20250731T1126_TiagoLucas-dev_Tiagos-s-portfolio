@@ -13,6 +13,10 @@ export default function Home() {
         <Image src="/styled-components.svg" alt="Styled Components" width={125} height={125} />
     ];
 
+    const lastProjects = [
+
+    ]
+
     return (
         <div className=" mr-10  ml-10 ">
             <header className="flex items-center justify-between  mt-6  mb-6">
@@ -71,7 +75,7 @@ export default function Home() {
                     </section>
                 </div>
 
-                <div className="text-base mt-12">
+                <div className="text-base mt-12 mb-12">
                     <section
                         className=" flex items-center
  flex-col
@@ -84,10 +88,13 @@ export default function Home() {
                         >
                             Sobre mim
                         </h2>
-                        <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
+
+                        <div className="mt-20 mb-28">
+                            <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
+                        </div>
 
                         <div
-                            className="bg-gray-100
+                            className="bg-gray-200
 "
                         >
                             <p className="pl-4 pr-4 text-center">
@@ -100,43 +107,55 @@ export default function Home() {
                 </div>
 
                 <div>
-                    <h2>Ultimos projetos</h2>
-
-                    <div>
-                        <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
-
-                        <div>
-                            <h4>Titulo</h4>
-                            <p>Tags</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
+                    <section
+                        className=" flex items-center
+ flex-col
+"
+                    >
+                        <h2
+                            className="text-3xl 
+ font-semibold"
+                        >
+                            Últimos projetos
+                        </h2>
 
                         <div>
-                            <h4>Titulo</h4>
-                            <p>Tags</p>
-                        </div>
-                    </div>
+                            <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
 
-                    <div>
-                        <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
+                            <div>
+                                <h4 className="font-semibold
+ ">Titulo</h4>
+                                <p>Tags</p>
+                            </div>
+                        </div>
 
                         <div>
-                            <h4>Titulo</h4>
-                            <p>Tags</p>
-                        </div>
-                    </div>
+                            <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
 
-                    <div>
-                        <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
+                            <div>
+                                <h4>Titulo</h4>
+                                <p>Tags</p>
+                            </div>
+                        </div>
 
                         <div>
-                            <h4>Titulo</h4>
-                            <p>Tags</p>
+                            <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
+
+                            <div>
+                                <h4>Titulo</h4>
+                                <p>Tags</p>
+                            </div>
                         </div>
-                    </div>
+
+                        <div>
+                            <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
+
+                            <div>
+                                <h4>Titulo</h4>
+                                <p>Tags</p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
 
                 <div>
