@@ -46,7 +46,10 @@ export default function Home() {
 
             <main>
                 <div>
-                    <div className="mb-[4.5rem]">
+                    <div
+                        className="flex 
+ flex-col mb-[4.5rem] items-start"
+                    >
                         <div className="font-semibold mb-6">React | Vite | Next</div>
 
                         <h1 className="text-3xl font-semibold italic mb-6 ">&lt; Desenvolvedor /&gt;</h1>
@@ -123,8 +126,12 @@ export default function Home() {
                             <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
 
                             <div>
-                                <h4 className="font-semibold
- ">Titulo</h4>
+                                <h4
+                                    className="font-semibold
+ "
+                                >
+                                    Titulo
+                                </h4>
                                 <p>Tags</p>
                             </div>
                         </div>
