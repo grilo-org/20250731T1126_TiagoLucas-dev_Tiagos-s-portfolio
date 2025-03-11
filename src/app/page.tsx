@@ -116,38 +116,51 @@ export default function Home() {
                     </section>
                 </div>
 
-                <div className="mt-12">
-                    <h2>Experiências Profissionais</h2>
+                <div className="mt-12 flex items-center flex-col">
+                    <h2
+                        className="text-xl
+ font-semibold mb-2" 
+                    >
+                        Experiências Profissionais
+                    </h2>
 
-                    <section className="mb-8">
-                        <p>
-                            Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.
-                            <br />
-                            Criação de páginas web usando ReactJs e Next em micro-frontends.
-                        </p>
-                        <div className="flex items-center gap-2 mt-4">
+                    <section className="mt-8 mb-8 bg-gray-200">
+                        <ul
+                            className="w-60 flex items-start flex-col gap-4
+"
+                        >
+                            <li><span className="font-bold">.</span> Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.</li>
+
+                            <li><span className="font-bold">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.</li>
+                        </ul>
+                        <div className="flex items-center gap-2 mt-6">
                             <Image src="/python.svg" alt="Picture of the author" width={50} height={50} />
                             <div>
-                                <h3>Xerox</h3>
+                                <h3 className="font-semibold">Xerox</h3>
                                 <span>Desenvolvedor</span>
                             </div>
                         </div>
                     </section>
 
-                    <section>
-                        <p>
-                            Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.
-                            <br />
-                            Criação de páginas web usando ReactJs e Next em micro-frontends.
-                        </p>
-                        <div className="flex items-center gap-2 mt-4">
+   <section className="mt-8 mb-8 bg-gray-200">
+                        <ul
+                            className="w-60 flex items-start flex-col gap-4
+"
+                        >
+                            <li><span className="font-bold">.</span> Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.</li>
+
+                            <li><span className="font-bold">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.</li>
+                        </ul>
+                        <div className="flex items-center gap-2 mt-6">
                             <Image src="/python.svg" alt="Picture of the author" width={50} height={50} />
                             <div>
-                                <h3>Xerox</h3>
+                                <h3 className="font-semibold">Xerox</h3>
                                 <span>Desenvolvedor</span>
                             </div>
                         </div>
                     </section>
+
+             
                 </div>
 
                 <div className="mt-12">
