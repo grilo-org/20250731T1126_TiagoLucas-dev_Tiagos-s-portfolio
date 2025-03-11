@@ -25,7 +25,6 @@ export default function Slider({ images }: SliderProps) {
             }}
             navigation={true}
             modules={[Pagination, Navigation, Autoplay]}
-            className="flex"
             autoplay={{
                 delay: 2500,
                 disableOnInteraction: false
