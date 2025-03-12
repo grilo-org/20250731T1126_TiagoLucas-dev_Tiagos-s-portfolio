@@ -96,7 +96,7 @@ export default function Home() {
                         <div className="mt-20 mb-28">
                             <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
                         </div>
-                        <div className="bg-gray-200 p-4 text-center">
+                        <div className="bg-gray-200 p-4 text-center rounded-lg">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
                         </div>
                     </section>
@@ -119,19 +119,26 @@ export default function Home() {
                 <div className="mt-12 flex items-center flex-col">
                     <h2
                         className="text-xl
- font-semibold mb-2" 
+ font-semibold mb-2"
                     >
                         Experiências Profissionais
                     </h2>
 
-                    <section className="mt-8 mb-8 bg-gray-200">
+                    <section
+                        className="p-4 bg-gray-200 rounded-lg mb-4
+"
+                    >
                         <ul
                             className="w-60 flex items-start flex-col gap-4
 "
                         >
-                            <li><span className="font-bold">.</span> Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.</li>
+                            <li className="">
+                                <span className="font-bold">.</span> Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.
+                            </li>
 
-                            <li><span className="font-bold">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.</li>
+                            <li className="">
+                                <span className="font-bold">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.
+                            </li>
                         </ul>
                         <div className="flex items-center gap-2 mt-6">
                             <Image src="/python.svg" alt="Picture of the author" width={50} height={50} />
@@ -142,14 +149,18 @@ export default function Home() {
                         </div>
                     </section>
 
-   <section className="mt-8 mb-8 bg-gray-200">
+                    <section className="p-4 bg-gray-200 rounded-lg mb-4">
                         <ul
                             className="w-60 flex items-start flex-col gap-4
 "
                         >
-                            <li><span className="font-bold">.</span> Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.</li>
+                            <li>
+                                <span className="font-bold text-xl">.</span> Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.
+                            </li>
 
-                            <li><span className="font-bold">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.</li>
+                            <li>
+                                <span className="font-bold text-xl">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.
+                            </li>
                         </ul>
                         <div className="flex items-center gap-2 mt-6">
                             <Image src="/python.svg" alt="Picture of the author" width={50} height={50} />
@@ -159,35 +170,53 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-
-             
                 </div>
 
-                <div className="mt-12">
-                    <section>
-                        <h2>Vamos trabalhar juntos!</h2>
+                <div className="my-10">
+                    <section className="w-72 flex items-start flex-col gap-6">
+                        <h2 className="text-xl font-semibold">Vamos trabalhar juntos!</h2>
                         <p>
                             Olá, eu sou o Tiago 👋
                             <br />
                             Entre em contato comigo e vamos bater um papo.
                         </p>
-                        <div className="flex gap-4 mt-4">
-                            <Image src="/social/github.svg" alt="Github" width={35} height={35} />
-                            <Image src="/social/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
-                            <Image src="/social/gmail.svg" alt="Gmail" width={35} height={35} />
-                            <Image src="/social/linkedin.svg" alt="LinkedIn" width={35} height={35} />
+                        <div className="flex gap-6 mt-2">
+                            <a href="https://github.com/TiagoLucas-dev" target="_blank">
+                                <Image src="/social/github.svg" alt="Github" width={35} height={35} />
+                            </a>
+                            <a href="https://wa.me/5511964775051" target="_blank">
+                                <Image src="/social/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
+                            </a>
+                            <a href="mailto:titi020604@gmail.com">
+                                <Image src="/social/gmail.svg" alt="Gmail" width={35} height={35} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/tiagolucasdasilva/" target="blank">
+                                <Image src="/social/linkedin.svg" alt="LinkedIn" width={35} height={35} />
+                            </a>
                         </div>
                     </section>
 
-                    <section className="mt-6">
-                        <form className="flex flex-col gap-4">
+                    <section className="mt-10">
+                        <form className="flex flex-col gap-6">
                             <label>
-                                <input type="text" placeholder="Nome" className="border p-2 w-full" />
+                                <input
+                                    type="text"
+                                    placeholder="Nome"
+                                    className="border p-2 w-full 
+                                    placeholder-gray-500 bg-gray-200
+                                    "
+                                />
                             </label>
                             <label>
-                                <input type="email" placeholder="E-mail" className="border p-2 w-full" />
+                                <input
+                                    type="email"
+                                    placeholder="E-mail"
+                                    className="border p-2 w-full 
+                                    placeholder-gray-500 bg-gray-200
+"
+                                />
                             </label>
-                            <button className="bg-black text-white py-2">Enviar</button>
+                            <button className="bg-black text-white py-4 px-12">Enviar</button>
                         </form>
                     </section>
                 </div>
