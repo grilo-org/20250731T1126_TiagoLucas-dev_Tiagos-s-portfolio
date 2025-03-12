@@ -2,6 +2,9 @@ import Image from 'next/image';
 import { List } from '@phosphor-icons/react/dist/ssr';
 import Slider from './components/Slider';
 import LatestProjects from './components/LatestProjects';
+import TypeAnimations from './components/TypeAnimations';
+
+
 
 export default function Home() {
     const sliderImages = [
@@ -74,14 +77,16 @@ export default function Home() {
 
             <main>
                 <div className="flex flex-col mb-[4.5rem] items-start">
-                    <div className="font-semibold mb-6">React | Vite | Next</div>
-                    <h1 className="text-3xl font-semibold italic mb-6">&lt; Desenvolvedor /&gt;</h1>
+                    <div className="font-semibold mb-6"> Olá 🇧🇷 | Hello 🇬🇧 | Hola 🇪🇸</div>
+                    <h1 className="text-3xl font-semibold italic mb-6">&lt; <TypeAnimations /> /&gt;</h1>
                     <p className="text-base mb-12">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
 
                     <button className="bg-black pt-4 pr-12 pb-4 pl-12 text-white">Contato</button>
                 </div>
 
-                <Image src="/globe.svg" alt="Picture of the author" width={250} height={500} className="m-0" />
+                <div className="flex justify-center">
+                <Image src="/perfil.jpg" alt="Picture of the author" width={250} height={500} className="m-0" />
+                </div>
 
                 <div className="text-base mt-12">
                     {/* Carrossel com alguns ícones (Slider) */}
@@ -94,10 +99,11 @@ export default function Home() {
                     <section className="flex items-center flex-col">
                         <h2 className="text-3xl font-semibold">Sobre mim</h2>
                         <div className="mt-20 mb-28">
-                            <Image src="/python.svg" alt="Picture of the author" width={100} height={100} />
+                            <Image src="/perfil.jpg" alt="Picture of the author" width={100} height={100} />
                         </div>
                         <div className="bg-gray-200 p-4 text-center rounded-lg">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...
+                            </p>
                         </div>
                     </section>
                 </div>
