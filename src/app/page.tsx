@@ -56,7 +56,7 @@ export default function Home() {
     ];
 
     return (
-        <div className="mr-10 ml-10">
+        <div className="mx-10 mb-24">
             <header className="flex items-center justify-between mt-6 mb-6">
                 <h2 className="text-xl font-semibold">
                     <a href="/">Tiago Lucas.dev</a>
@@ -77,15 +77,27 @@ export default function Home() {
 
             <main>
                 <div className="flex flex-col mb-[4.5rem] items-start">
-                    <div className="font-semibold mb-6"> Olá 🇧🇷 | Hello 🇬🇧 | Hola 🇪🇸</div>
-                    <h1 className="text-3xl font-semibold italic mb-6">&lt; <TypeAnimations /> /&gt;</h1>
+                    <div className="font-semibold mb-6 italic">Olá 🇵🇹 | Hello 🇬🇧 | Hola 🇪🇸</div>
+                    <h1 className="text-3xl font-semibold italic mb-6">
+                        &lt; <TypeAnimations /> /&gt;
+                    </h1>
                     <p className="text-base mb-12">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
 
                     <button className="bg-black pt-4 pr-12 pb-4 pl-12 text-white">Contato</button>
                 </div>
 
-                <div className="flex justify-center">
-                <Image src="/perfil.jpg" alt="Picture of the author" width={250} height={500} className="m-0" />
+                <div className="flex justify-center ">
+                    <Image
+                        src="/perfil.jpg"
+                        alt="Picture of the author"
+                        width={250}
+                        height={500}
+                        className="m-0 rounded-lg transition duration-400 ease-in-out
+                            [transform:perspective(400px)_rotate3d(1,-1,0,8deg)] 
+                            [-webkit-mask:linear-gradient(135deg,#000c_40%,#000,#000c_60%)_100%_100%/250%_250%] 
+                            hover:[transform:perspective(400px)_rotate3d(1,-1,0,-8deg)] 
+                            hover:[-webkit-mask-position:0_0]"
+                    />
                 </div>
 
                 <div className="text-base mt-12">
@@ -102,8 +114,7 @@ export default function Home() {
                             <Image src="/perfil.jpg" alt="Picture of the author" width={100} height={100} />
                         </div>
                         <div className="bg-gray-200 p-4 text-center rounded-lg">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...
-                            </p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
                         </div>
                     </section>
                 </div>
@@ -178,7 +189,7 @@ export default function Home() {
                     </section>
                 </div>
 
-                <div className="my-10">
+                <div className="mt-10">
                     <section className="w-72 flex items-start flex-col gap-6">
                         <h2 className="text-xl font-semibold">Vamos trabalhar juntos!</h2>
                         <p>

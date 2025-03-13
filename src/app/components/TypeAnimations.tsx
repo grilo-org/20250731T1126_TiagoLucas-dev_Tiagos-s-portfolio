@@ -8,18 +8,21 @@ export default function TypeAnimations() {
             preRenderFirstString={true}
             sequence={[
                 // Same substring at the start will only be typed out once, initially
-                'We produce Luiz for Mice',
-                2500, // wait 1s before replacing "Mice" with "Hamsters"
-                'We produce Thiago for Hamsters',
+                'Desenvolvedor',
                 2500,
-                'We produce Mustafah for Guinea Pigs',
+                'Desenvolvedor Web',
                 2500,
-                'We produce Leandro for Chinchillas',
+                'Desenvolvedor React',
+                2500,
+                'Desenvolvedor Javascript',
+                2500,
+                'Desenvolvedor Typescript ',
+                2500,
+                'Desenvolvedor Next',
                 2500
-                // React | Vite | Next
             ]}
             wrapper="span"
-            speed={50}
+            speed={45}
             repeat={Infinity}
         />
     );
