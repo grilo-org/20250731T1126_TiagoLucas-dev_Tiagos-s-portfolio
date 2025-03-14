@@ -1,12 +1,17 @@
 import Image from 'next/image';
 import { List } from '@phosphor-icons/react/dist/ssr';
 import Slider from './components/Slider';
+import Form from './components/Form';
 import LatestProjects from './components/LatestProjects';
 import TypeAnimations from './components/TypeAnimations';
 
 
 
+
 export default function Home() {
+
+
+
     const sliderImages = [
         <Image src="/python.svg" alt="Python" width={125} height={125} />,
         <Image src="/javascript.svg" alt="JavaScript" width={125} height={125} />,
@@ -94,9 +99,7 @@ export default function Home() {
                         height={500}
                         className="m-0 rounded-lg transition duration-400 ease-in-out
                             [transform:perspective(400px)_rotate3d(1,-1,0,8deg)] 
-                            [-webkit-mask:linear-gradient(135deg,#000c_40%,#000,#000c_60%)_100%_100%/250%_250%] 
-                            hover:[transform:perspective(400px)_rotate3d(1,-1,0,-8deg)] 
-                            hover:[-webkit-mask-position:0_0]"
+                            hover:[transform:perspective(400px)_rotate3d(1,-1,0,-8deg)] "
                     />
                 </div>
 
@@ -114,7 +117,10 @@ export default function Home() {
                             <Image src="/perfil.jpg" alt="Picture of the author" width={100} height={100} />
                         </div>
                         <div className="bg-gray-200 p-4 text-center rounded-lg">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                            <p>
+                                Sou o Tiago, desenvolvedor de software especializado em soluções web e automação de processos, com domínio em React, HTML, CSS, JavaScript e Python. <br /> <br />
+                                Atuei na CPTM automatizando processos críticos e na Xerox Corporation desenvolvendo micro-frontends com React e Next.js. Busco desafios que impulsionem minhas habilidades e gerem impacto positivo.
+                            </p>
                         </div>
                     </section>
                 </div>
@@ -150,23 +156,23 @@ export default function Home() {
 "
                         >
                             <li className="">
-                                <span className="font-bold">.</span> Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.
+                                <span className="font-bold">.</span> Automatização do processo de cadastro de documentos através da criação de um RPA, aumentando eficiência operacional.
                             </li>
 
                             <li className="">
-                                <span className="font-bold">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.
+                                <span className="font-bold">.</span> Liderança no desenvolvimento de um sistema para filtragem e verificação de documentos, impactando mais de 10 mil registros.
                             </li>
                         </ul>
                         <div className="flex items-center gap-2 mt-6">
-                            <Image src="/python.svg" alt="Picture of the author" width={50} height={50} />
+                            <Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} />
                             <div>
-                                <h3 className="font-semibold">Xerox</h3>
-                                <span>Desenvolvedor</span>
+                                <h3 className="font-semibold">CPTM</h3>
+                                <span>Aluno Aprendiz</span>
                             </div>
                         </div>
                     </section>
 
-                    <section className="p-4 bg-gray-200 rounded-lg mb-4">
+                    <section className="p-4 bg-gray-200 rounded-lg mb-4 ">
                         <ul
                             className="w-60 flex items-start flex-col gap-4
 "
@@ -180,9 +186,9 @@ export default function Home() {
                             </li>
                         </ul>
                         <div className="flex items-center gap-2 mt-6">
-                            <Image src="/python.svg" alt="Picture of the author" width={50} height={50} />
+                            <Image src="/Xerox_logo.svg" alt="Xerox Corporation" width={50} height={50} />
                             <div>
-                                <h3 className="font-semibold">Xerox</h3>
+                                <h3 className="font-semibold">Xerox Corporation</h3>
                                 <span>Desenvolvedor</span>
                             </div>
                         </div>
@@ -213,29 +219,8 @@ export default function Home() {
                         </div>
                     </section>
 
-                    <section className="mt-10">
-                        <form className="flex flex-col gap-6">
-                            <label>
-                                <input
-                                    type="text"
-                                    placeholder="Nome"
-                                    className="border p-2 w-full 
-                                    placeholder-gray-500 bg-gray-200
-                                    "
-                                />
-                            </label>
-                            <label>
-                                <input
-                                    type="email"
-                                    placeholder="E-mail"
-                                    className="border p-2 w-full 
-                                    placeholder-gray-500 bg-gray-200
-"
-                                />
-                            </label>
-                            <button className="bg-black text-white py-4 px-12">Enviar</button>
-                        </form>
-                    </section>
+                <Form />
+
                 </div>
             </main>
         </div>

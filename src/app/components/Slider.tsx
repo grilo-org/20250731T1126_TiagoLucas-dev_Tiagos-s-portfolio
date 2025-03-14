@@ -29,7 +29,7 @@ export default function Slider({ images }: SliderProps) {
                 delay: 2500,
                 disableOnInteraction: false
             }}
-            onSlideChange={() => console.log('slide change')}
+            // onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
         >
             {images.map((image, index) => (
