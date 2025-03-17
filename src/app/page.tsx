@@ -5,13 +5,7 @@ import Form from './components/Form';
 import LatestProjects from './components/LatestProjects';
 import TypeAnimations from './components/TypeAnimations';
 
-
-
-
 export default function Home() {
-
-
-
     const sliderImages = [
         <Image src="/python.svg" alt="Python" width={125} height={125} />,
         <Image src="/javascript.svg" alt="JavaScript" width={125} height={125} />,
@@ -50,12 +44,11 @@ export default function Home() {
             tag: 'React.js · Styled-components · Axios · Vite · Netlify',
             link: 'https://tiagolucas-dev.github.io/Space-Cream/'
         }
-
     ];
 
     return (
         <div className="mx-10 mb-24">
-            <header className="flex items-center justify-between mt-6 mb-6">
+            <header className="flex items-center justify-between mt-6 mb-6 ">
                 <h2 className="text-xl font-semibold">
                     <a href="/">Tiago Lucas.dev</a>
                 </h2>
@@ -74,26 +67,38 @@ export default function Home() {
             </header>
 
             <main>
-                <div className="flex flex-col mb-[4.5rem] items-start">
-                    <div className="font-semibold mb-6 italic">Olá 🇵🇹 | Hello 🇬🇧 | Hola 🇪🇸</div>
-                    <h1 className="text-3xl font-semibold italic mb-6">
-                        &lt; <TypeAnimations /> /&gt;
-                    </h1>
-                    <p className="text-base mb-12">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
+                <div className="md:flex">
+                    <div className="flex flex-col mb-[4.5rem] items-start md:w-xl justify-between">
+                        <div className="font-semibold mb-6 italic">Olá 🇵🇹 | Hello 🇬🇧 | Hola 🇪🇸</div>
+                        <div
+                            className="
 
-                    <button className="bg-black pt-4 pr-12 pb-4 pl-12 text-white">Contato</button>
-                </div>
 
-                <div className="flex justify-center ">
-                    <Image
-                        src="/perfil.jpg"
-                        alt="Picture of the author"
-                        width={250}
-                        height={500}
-                        className="m-0 rounded-lg transition duration-400 ease-in-out
+"
+                        >
+                            <h1
+                                className="text-3xl font-semibold italic mb-6 md:text-6xl
+"
+                            >
+                                &lt; <TypeAnimations /> /&gt;
+                            </h1>
+                            <p className="text-base mb-12">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
+
+                            <button className="bg-black pt-4 pr-12 pb-4 pl-12 text-white">Contato</button>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center ">
+                        <Image
+                            src="/perfil.jpg"
+                            alt="Picture of the author"
+                            width={250}
+                            height={500}
+                            className="m-0 rounded-lg transition duration-400 ease-in-out
                             [transform:perspective(400px)_rotate3d(1,-1,0,8deg)] 
                             hover:[transform:perspective(400px)_rotate3d(1,-1,0,-8deg)] "
-                    />
+                        />
+                    </div>
                 </div>
 
                 <div className="text-base mt-12">
@@ -212,8 +217,7 @@ export default function Home() {
                         </div>
                     </section>
 
-                <Form />
-
+                    <Form />
                 </div>
             </main>
         </div>
