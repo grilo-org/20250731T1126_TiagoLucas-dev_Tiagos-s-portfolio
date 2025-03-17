@@ -10,6 +10,7 @@ interface Project {
     alt: string;
     title: string;
     tag: string;
+    link: string;
 }
 
 interface LatestProjectsProps {
@@ -34,7 +35,7 @@ export default function LatestProjects({ projects }: LatestProjectsProps) {
         >
             {projects.map((project, index) => (
                 <SwiperSlide key={index} className="pb-8 !flex flex-col items-center">
-                    <Image src={project.imageSrc} alt={project.alt} width={125} height={125} />
+                    <a href={project.link}><Image src={project.imageSrc} alt={project.alt} width={500} height={500} /></a>
                     <h4 className="mt-4 font-semibold">{project.title}</h4>
                     <p>{project.tag}</p>
                 </SwiperSlide>

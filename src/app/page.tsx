@@ -23,41 +23,34 @@ export default function Home() {
 
     const latestProjects = [
         {
-            imageSrc: '/python.svg',
-            alt: 'Python',
-            title: 'Projeto Python',
-            tag: 'Backend'
+            imageSrc: '/RocketNotes.png',
+            alt: 'RocketNotes',
+            title: 'RocketNotes',
+            tag: 'React.js · Styled-components · Axios · Vite · Netlify',
+            link: 'https://rocketnotes-makeyournotes.netlify.app/'
         },
         {
-            imageSrc: '/javascript.svg',
-            alt: 'JavaScript',
-            title: 'Projeto JS',
-            tag: 'Frontend'
+            imageSrc: '/FocusTimerV2.png',
+            alt: 'FocusTimerV2',
+            title: 'FocusTimerV2',
+            tag: 'React.js · Styled-components · Axios · Vite · Netlify',
+            link: 'https://tiagolucas-dev.github.io/FocusTimerV2/'
         },
         {
-            imageSrc: '/nextjs-icon.svg',
-            alt: 'Next.js',
-            title: 'Projeto Next.js',
-            tag: 'Fullstack'
+            imageSrc: '/Ignite_Timer.png',
+            alt: 'Ignite Timer',
+            title: 'Ignite Timer',
+            tag: 'React.js · Styled-components · Axios · Vite · Netlify',
+            link: 'https://ignite-timer01.netlify.app/'
         },
         {
-            imageSrc: '/react.svg',
-            alt: 'React',
-            title: 'Projeto React',
-            tag: 'Frontend'
-        },
-        {
-            imageSrc: '/tailwindCss.svg',
-            alt: 'Tailwind CSS',
-            title: 'Projeto Tailwind',
-            tag: 'CSS'
-        },
-        {
-            imageSrc: '/styled-components.svg',
-            alt: 'Styled Components',
-            title: 'Projeto Styled',
-            tag: 'CSS-in-JS'
+            imageSrc: '/SpaceCream.png',
+            alt: 'SpaceCream',
+            title: 'SpaceCream',
+            tag: 'React.js · Styled-components · Axios · Vite · Netlify',
+            link: 'https://tiagolucas-dev.github.io/Space-Cream/'
         }
+
     ];
 
     return (
@@ -131,7 +124,7 @@ export default function Home() {
 
                         {/* Carrossel de projetos (LatestProjects) */}
                         <div
-                            className="mt-6 w-full flex justify-center items-center
+                            className="mt-6 w-full flex justify-center items-center rounded-lg
 "
                         >
                             <LatestProjects projects={latestProjects} />
