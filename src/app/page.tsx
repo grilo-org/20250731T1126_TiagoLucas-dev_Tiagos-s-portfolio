@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { List } from '@phosphor-icons/react/dist/ssr';
 import Slider from './components/Slider';
 import Form from './components/Form';
+import Techs from './components/Techs';
 import LatestProjects from './components/LatestProjects';
 import TypeAnimations from './components/TypeAnimations';
 
@@ -47,19 +48,21 @@ export default function Home() {
     ];
 
     return (
-        <div className="mx-10 mb-24">
-            <header className="flex items-center justify-between mt-6 mb-6 ">
-                <h2 className="text-xl font-semibold">
+        <div className=" mx-7  md:mx-10 mb-24">
+            <header className="flex items-center justify-between py-6 sticky top-0 z-10 bg-white
+">
+                <h2 className="text-xl font-medium">
                     <a href="/">Tiago Lucas.dev</a>
                 </h2>
 
-                <menu>
+                <menu className="block md:hidden">
                     <List size={32} color="black" weight="bold" />
                 </menu>
 
-                <nav className="hidden">
-                    <menu className="flex">
-                        <li>Sobre</li>
+                <nav className="hidden md:block">
+                    <menu className="flex gap-6 font-semibold">
+                        <li>Sobre mim</li>
+                        <li>Últimos projetos</li>
                         <li>Experiencia</li>
                         <li>Contato</li>
                     </menu>
@@ -67,15 +70,19 @@ export default function Home() {
             </header>
 
             <main>
-                <div className="md:flex">
+                <div
+                    className="md:flex justify-between
+"
+                >
                     <div className="flex flex-col mb-[4.5rem] items-start md:w-xl justify-between">
-                        <div className="font-semibold mb-6 italic">Olá 🇵🇹 | Hello 🇬🇧 | Hola 🇪🇸</div>
                         <div
-                            className="
-
+                            className=" md:w-3/4 mt-4                         
 
 "
                         >
+                            <div className="font-semibold mb-6 text-2xl  md:text-3xl">
+                                Olá, pode me chamar de Tiago Lucas <span className="font-bold text-orange-500">:)</span>
+                            </div>
                             <h1
                                 className="text-3xl font-semibold italic mb-6 md:text-6xl
 "
@@ -88,13 +95,13 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="flex justify-center ">
+                    <div className="flex justify-center md:mr-12">
                         <Image
                             src="/perfil.jpg"
                             alt="Picture of the author"
                             width={250}
                             height={500}
-                            className="m-0 rounded-lg transition duration-400 ease-in-out
+                            className="m-0 rounded-lg transition duration-400 ease-in-out border-2 border-orange-500
                             [transform:perspective(400px)_rotate3d(1,-1,0,8deg)] 
                             hover:[transform:perspective(400px)_rotate3d(1,-1,0,-8deg)] "
                         />
@@ -103,16 +110,27 @@ export default function Home() {
 
                 <div className="text-base mt-12">
                     {/* Carrossel com alguns ícones (Slider) */}
-                    <section className="flex">
+                    <section className="flex justify-center md:hidden">
                         <Slider images={sliderImages} />
                     </section>
+                    <section className="flex justify-center hidden md:block">
+                        <Techs images={sliderImages} />
+                    </section>
+
                 </div>
 
                 <div className="text-base mt-12 mb-12">
                     <section className="flex items-center flex-col">
                         <h2 className="text-3xl font-semibold">Sobre mim</h2>
-                        <div className="mt-20 mb-28">
-                            <Image src="/perfil.jpg" alt="Picture of the author" width={100} height={100} />
+                        <div className="my-10 ">
+                            <Image
+                                src="/perfilImage.jpg"
+                                alt="Picture of the author"
+                                width={600}
+                                height={300}
+                                className="m-0 rounded-lg transition duration-400 ease-in-out border-2 border-orange-500
+                             "
+                            />
                         </div>
                         <div className="bg-gray-200 p-4 text-center rounded-lg">
                             <p>
