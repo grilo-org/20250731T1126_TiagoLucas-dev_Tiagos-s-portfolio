@@ -49,8 +49,10 @@ export default function Home() {
 
     return (
         <div className=" mx-7  md:mx-10 mb-24">
-            <header className="flex items-center justify-between py-6 sticky top-0 z-10 bg-white
-">
+            <header
+                className="flex items-center justify-between py-6 sticky top-0 z-10 bg-white
+"
+            >
                 <h2 className="text-xl font-medium">
                     <a href="/">Tiago Lucas.dev</a>
                 </h2>
@@ -71,7 +73,7 @@ export default function Home() {
 
             <main>
                 <div
-                    className="md:flex justify-between
+                    className="md:flex justify-between md:h-[26rem]
 "
                 >
                     <div className="flex flex-col mb-[4.5rem] items-start md:w-xl justify-between">
@@ -95,15 +97,14 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="flex justify-center md:mr-12">
+                    <div className="flex justify-center md:mr-12 md:items-center">
                         <Image
                             src="/perfil.jpg"
                             alt="Picture of the author"
-                            width={250}
-                            height={500}
+                            width={640}
+                            height={480}
                             className="m-0 rounded-lg transition duration-400 ease-in-out border-2 border-orange-500
-                            [transform:perspective(400px)_rotate3d(1,-1,0,8deg)] 
-                            hover:[transform:perspective(400px)_rotate3d(1,-1,0,-8deg)] "
+                            "
                         />
                     </div>
                 </div>
@@ -113,13 +114,12 @@ export default function Home() {
                     <section className="flex justify-center md:hidden">
                         <Slider images={sliderImages} />
                     </section>
-                    <section className="flex justify-center hidden md:block">
+                    <section className="justify-center hidden md:flex">
                         <Techs images={sliderImages} />
                     </section>
-
                 </div>
 
-                <div className="text-base mt-12 mb-12">
+                <div className="text-base my-12 md: mt-24">
                     <section className="flex items-center flex-col">
                         <h2 className="text-3xl font-semibold">Sobre mim</h2>
                         <div className="my-10 ">
