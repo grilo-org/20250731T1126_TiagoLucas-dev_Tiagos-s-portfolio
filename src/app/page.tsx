@@ -1,10 +1,12 @@
-import Image from 'next/image';
 import { List } from '@phosphor-icons/react/dist/ssr';
-import Slider from './components/Slider';
+
+import Image from 'next/image';
 import Form from './components/Form';
 import Techs from './components/Techs';
-import LatestProjects from './components/LatestProjects';
+import Slider from './components/Slider';
 import TypeAnimations from './components/TypeAnimations';
+import LatestProjects from './components/LatestProjects';
+import LatestProjectsSlider from './components/LatestProjectsSlider';
 
 export default function Home() {
     const sliderImages = [
@@ -22,6 +24,7 @@ export default function Home() {
             alt: 'RocketNotes',
             title: 'RocketNotes',
             tag: 'React.js · Styled-components · Axios · Vite · Netlify',
+            description: "Descrição",
             link: 'https://rocketnotes-makeyournotes.netlify.app/'
         },
         {
@@ -29,6 +32,7 @@ export default function Home() {
             alt: 'FocusTimerV2',
             title: 'FocusTimerV2',
             tag: 'React.js · Styled-components · Axios · Vite · Netlify',
+            description: 'Descrição',
             link: 'https://tiagolucas-dev.github.io/FocusTimerV2/'
         },
         {
@@ -36,6 +40,7 @@ export default function Home() {
             alt: 'Ignite Timer',
             title: 'Ignite Timer',
             tag: 'React.js · Styled-components · Axios · Vite · Netlify',
+            description: 'Descrição',
             link: 'https://ignite-timer01.netlify.app/'
         },
         {
@@ -43,6 +48,7 @@ export default function Home() {
             alt: 'SpaceCream',
             title: 'SpaceCream',
             tag: 'React.js · Styled-components · Axios · Vite · Netlify',
+            description: 'Descrição',
             link: 'https://tiagolucas-dev.github.io/Space-Cream/'
         }
     ];
@@ -63,10 +69,10 @@ export default function Home() {
 
                 <nav className="hidden md:block">
                     <menu className="flex gap-6 font-semibold">
-                        <li>Sobre mim</li>
-                        <li>Últimos projetos</li>
-                        <li>Experiencia</li>
-                        <li>Contato</li>
+                        <li className="cursor-pointer">Sobre mim</li>
+                        <li className="cursor-pointer">Últimos projetos</li>
+                        <li className="cursor-pointer">Experiencia</li>
+                        <li className="cursor-pointer">Contato</li>
                     </menu>
                 </nav>
             </header>
@@ -119,8 +125,11 @@ export default function Home() {
                     </section>
                 </div>
 
-                <div className="text-base my-12 md: mt-24">
-                    <section className="flex items-center flex-col">
+                <div className="text-base my-12 md: mt-24 flex justify-center">
+                    <section
+                        className="flex items-center flex-col w-[37.5rem]
+"
+                    >
                         <h2 className="text-3xl font-semibold">Sobre mim</h2>
                         <div className="my-10 ">
                             <Image
@@ -143,19 +152,23 @@ export default function Home() {
 
                 <div>
                     <section className="flex items-center flex-col">
-                        <h2 className="text-3xl font-semibold">Últimos projetos</h2>
+                        <h2 className="text-3xl font-semibold mb-6 ">Últimos projetos</h2>
 
                         {/* Carrossel de projetos (LatestProjects) */}
                         <div
-                            className="mt-6 w-full flex justify-center items-center rounded-lg
+                            className="w-full flex justify-center items-center rounded-lg md:hidden
 "
                         >
+                            <LatestProjectsSlider projects={latestProjects} />
+
+                        </div>
+                        <div className="hidden md:flex ">
                             <LatestProjects projects={latestProjects} />
                         </div>
                     </section>
                 </div>
 
-                <div className="mt-12 flex items-center flex-col">
+                <div className="mt-12 flex items-center flex-col ">
                     <h2
                         className="text-xl
  font-semibold mb-2"
