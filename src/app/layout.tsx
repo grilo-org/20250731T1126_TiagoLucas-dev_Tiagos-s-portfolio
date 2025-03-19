@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Epilogue } from "next/font/google";
 import "./globals.css";
 
+import Background from './components/Background';
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,7 +32,10 @@ export default function RootLayout({
 }>) {
   return (
       <html lang="en">
-          <body className={`${epilogue.variable} antialiased`}>{children}</body>
+          <body className={`${epilogue.variable} antialiased`}>
+            <Background />
+            {children}
+            </body>
       </html>
   );
 }
