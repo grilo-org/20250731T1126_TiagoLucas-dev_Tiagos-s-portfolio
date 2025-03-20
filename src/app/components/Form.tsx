@@ -3,18 +3,14 @@
 import { useForm } from 'react-hook-form';
 
 interface FormData {
-  name: string;
-  email: string;
+    name: string;
+    email: string;
 }
 
 export default function Form() {
-    const {
-        register,
-        handleSubmit,
-  } = useForm<FormData>();
+    const { register, handleSubmit } = useForm<FormData>();
 
-
-  const onSubmit = (data: FormData) => {
+    const onSubmit = (data: FormData) => {
         const { name, email } = data;
         const subject = encodeURIComponent('Contato do Formulário');
         const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}`);
@@ -22,7 +18,7 @@ export default function Form() {
     };
 
     return (
-        <section className="mt-10">
+        <section className="mt-10 md: w-full">
             <form className="flex flex-col gap-6" onSubmit={handleSubmit(onSubmit)}>
                 <label>
                     <input type="text" placeholder="Nome" {...register('name', { required: 'O nome é obrigatório' })} className="border p-2 w-full placeholder-gray-500 bg-gray-200" />

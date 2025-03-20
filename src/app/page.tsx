@@ -11,12 +11,12 @@ import LatestProjectsSlider from './components/LatestProjectsSlider';
 
 export default function Home() {
     const sliderImages = [
-        <Image src="/python.svg" alt="Python" width={125} height={125} key="1"/>,
-        <Image src="/javascript.svg" alt="JavaScript" width={125} height={125} key="2"/>,
-        <Image src="/nextjs-icon.svg" alt="Next.js" width={125} height={125} key="3"/>,
-        <Image src="/react.svg" alt="React" width={125} height={125} key="4"/>,
-        <Image src="/tailwindCss.svg" alt="Tailwind CSS" width={125} height={125} key="5"/>,
-        <Image src="/styled-components.svg" alt="Styled Components" width={125} height={125} key="6"/>
+        <Image src="/python.svg" alt="Python" width={125} height={125} key="1" />,
+        <Image src="/javascript.svg" alt="JavaScript" width={125} height={125} key="2" />,
+        <Image src="/nextjs-icon.svg" alt="Next.js" width={125} height={125} key="3" />,
+        <Image src="/react.svg" alt="React" width={125} height={125} key="4" />,
+        <Image src="/tailwindCss.svg" alt="Tailwind CSS" width={125} height={125} key="5" />,
+        <Image src="/styled-components.svg" alt="Styled Components" width={125} height={125} key="6" />
     ];
 
     const latestProjects = [
@@ -25,7 +25,7 @@ export default function Home() {
             alt: 'RocketNotes',
             title: 'RocketNotes',
             tag: 'React.js · Styled-components · Axios · Vite · Netlify',
-            description: "Descrição",
+            description: 'Descrição',
             link: 'https://rocketnotes-makeyournotes.netlify.app/'
         },
         {
@@ -70,10 +70,18 @@ export default function Home() {
 
                 <nav className="hidden md:block">
                     <menu className="flex gap-6 font-semibold">
-                        <li className="cursor-pointer">Sobre mim</li>
-                        <li className="cursor-pointer">Últimos projetos</li>
-                        <li className="cursor-pointer">Experiencia</li>
-                        <li className="cursor-pointer">Contato</li>
+                        <li className="cursor-pointer">
+                            <Link href="#sobre-mim">Sobre mim</Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link href="#ultimos-projetos">Últimos projetos</Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link href="#experiencia">Experiencia</Link>
+                        </li>
+                        <li className="cursor-pointer">
+                            <Link href="#contato">Contato</Link>
+                        </li>
                     </menu>
                 </nav>
             </header>
@@ -100,7 +108,7 @@ export default function Home() {
                             </h1>
                             <p className="text-base mb-12">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
 
-                            <button className="bg-black pt-4 pr-12 pb-4 pl-12 text-white">Contato</button>
+                            <Link href="#contato" className="bg-black pt-4 pr-12 pb-4 pl-12 text-white">Contato</Link>
                         </div>
                     </div>
 
@@ -131,7 +139,9 @@ export default function Home() {
                         className="flex items-center flex-col w-[37.5rem]
 "
                     >
-                        <h2 className="text-3xl font-semibold">Sobre mim</h2>
+                        <h2 className="text-3xl font-semibold scroll-mt-24" id="sobre-mim">
+                            Sobre mim
+                        </h2>
                         <div className="my-10 ">
                             <Image
                                 src="/perfilImage.jpg"
@@ -153,7 +163,9 @@ export default function Home() {
 
                 <div>
                     <section className="flex items-center flex-col">
-                        <h2 className="text-3xl font-semibold mb-6 ">Últimos projetos</h2>
+                        <h2 className="text-3xl font-semibold mb-6 scroll-mt-24 " id="ultimos-projetos">
+                            Últimos projetos
+                        </h2>
 
                         {/* Carrossel de projetos (LatestProjects) */}
                         <div
@@ -171,7 +183,8 @@ export default function Home() {
                 <div className="mt-12 flex items-center flex-col ">
                     <h2
                         className="text-xl
- font-semibold mb-2 md:mb-4"
+ font-semibold mb-2 md:mb-4 scroll-mt-24"
+                        id="experiencia"
                     >
                         Experiências Profissionais
                     </h2>
@@ -230,31 +243,36 @@ export default function Home() {
                         </section>
                     </div>
                 </div>
-                <div className="mt-10">
-                    <section className="w-72 flex items-start flex-col gap-6">
-                        <h2 className="text-xl font-semibold">Vamos trabalhar juntos!</h2>
-                        <p>
-                            Olá, eu sou o Tiago 👋
-                            <br />
-                            Entre em contato comigo e vamos bater um papo.
-                        </p>
-                        <div className="flex gap-6 mt-2">
-                            <a href="https://github.com/TiagoLucas-dev" target="_blank">
-                                <Image src="/social/github.svg" alt="Github" width={35} height={35} />
-                            </a>
-                            <a href="https://wa.me/5511964775051" target="_blank">
-                                <Image src="/social/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
-                            </a>
-                            <a href="mailto:titi020604@gmail.com">
-                                <Image src="/social/gmail.svg" alt="Gmail" width={35} height={35} />
-                            </a>
-                            <a href="https://www.linkedin.com/in/tiagolucasdasilva/" target="blank">
-                                <Image src="/social/linkedin.svg" alt="LinkedIn" width={35} height={35} />
-                            </a>
-                        </div>
-                    </section>
+                <div className="flex flex-col items-center">
+                    <div className="mt-10 md: flex flex-col items-center md:w-2/6">
+                        <section className="w-72 flex items-start flex-col gap-6 md:items-center scroll-mt-24" id="contato">
+                            <h2 className="text-xl font-semibold">Vamos trabalhar juntos!</h2>
+                            <p>
+                                Olá, eu sou o Tiago 👋
+                                <br />
+                                Entre em contato comigo e vamos bater um papo.
+                            </p>
+                            <div
+                                className="flex gap-6
+ mt-2 md:gap-8"
+                            >
+                                <a href="https://github.com/TiagoLucas-dev" target="_blank">
+                                    <Image src="/social/github.svg" alt="Github" width={35} height={35} />
+                                </a>
+                                <a href="https://wa.me/5511964775051" target="_blank">
+                                    <Image src="/social/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
+                                </a>
+                                <a href="mailto:titi020604@gmail.com">
+                                    <Image src="/social/gmail.svg" alt="Gmail" width={35} height={35} />
+                                </a>
+                                <a href="https://www.linkedin.com/in/tiagolucasdasilva/" target="blank">
+                                    <Image src="/social/linkedin.svg" alt="LinkedIn" width={35} height={35} />
+                                </a>
+                            </div>
+                        </section>
 
-                    <Form />
+                        <Form />
+                    </div>
                 </div>
             </main>
         </div>

@@ -31,11 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en">
+      <html lang="pt-BR" className="scroll-smooth">
           <body className={`${epilogue.variable} antialiased`}>
-            <Background />
-            {children}
-            </body>
+              <Background />
+              {children}
+          </body>
       </html>
   );
 }
