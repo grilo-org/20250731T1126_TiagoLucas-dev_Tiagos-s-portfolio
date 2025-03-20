@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
       <html lang="pt-BR" className="scroll-smooth">
-          <body className={`${epilogue.variable} antialiased`}>
+          <body className={`${epilogue.variable} antialiased cursor-none`}>
               <Background />
               {children}
           </body>

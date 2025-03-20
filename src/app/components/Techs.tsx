@@ -14,7 +14,7 @@ export default function Techs({ images }: SliderProps) {
     return (
             <div className="flex gap-20 items-center justify-center">
                         {images.map((image, index) => (
-                        <div key={index} className="">
+                        <div key={index} className="hoverable">
                             {image}
                         </div>
                     ))}

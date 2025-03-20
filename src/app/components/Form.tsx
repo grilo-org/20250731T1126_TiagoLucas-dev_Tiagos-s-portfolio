@@ -26,7 +26,7 @@ export default function Form() {
                 <label>
                     <input type="email" placeholder="E-mail" {...register('email', { required: 'O email é obrigatório' })} className="border p-2 w-full placeholder-gray-500 bg-gray-200" />
                 </label>
-                <input className="bg-black text-white py-4 px-12 cursor-pointer" type="submit" value="Enviar" />
+                <input className="bg-black text-white py-4 px-12 cursor-none hoverable" type="submit" value="Enviar" />
             </form>
         </section>
     );

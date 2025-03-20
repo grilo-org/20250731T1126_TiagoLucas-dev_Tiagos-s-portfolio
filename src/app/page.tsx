@@ -5,9 +5,11 @@ import Link from 'next/link';
 import Form from './components/Form';
 import Techs from './components/Techs';
 import Slider from './components/Slider';
+import CustomCursor from './components/CustomCursor';
 import TypeAnimations from './components/TypeAnimations';
 import LatestProjects from './components/LatestProjects';
 import LatestProjectsSlider from './components/LatestProjectsSlider';
+
 
 export default function Home() {
     const sliderImages = [
@@ -56,11 +58,13 @@ export default function Home() {
 
     return (
         <div className=" mx-7  md:mx-10 mb-24">
+                  <CustomCursor />
+
             <header
                 className="flex items-center justify-between py-6 sticky top-0 z-10 bg-white
 "
             >
-                <h2 className="text-xl font-medium">
+                <h2 className="text-xl font-medium hoverable">
                     <Link href="/">Tiago Lucas.dev</Link>
                 </h2>
 
@@ -70,16 +74,16 @@ export default function Home() {
 
                 <nav className="hidden md:block">
                     <menu className="flex gap-6 font-semibold">
-                        <li className="cursor-pointer">
+                        <li className="cursor-none hoverable">
                             <Link href="#sobre-mim">Sobre mim</Link>
                         </li>
-                        <li className="cursor-pointer">
+                        <li className="cursor-none hoverable">
                             <Link href="#ultimos-projetos">Últimos projetos</Link>
                         </li>
-                        <li className="cursor-pointer">
+                        <li className="cursor-none hoverable">
                             <Link href="#experiencia">Experiencia</Link>
                         </li>
-                        <li className="cursor-pointer">
+                        <li className="cursor-none hoverable">
                             <Link href="#contato">Contato</Link>
                         </li>
                     </menu>
@@ -108,7 +112,7 @@ export default function Home() {
                             </h1>
                             <p className="text-base mb-12">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
 
-                            <Link href="#contato" className="bg-black pt-4 pr-12 pb-4 pl-12 text-white">Contato</Link>
+                            <Link href="#contato" className="bg-black pt-4 pr-12 pb-4 pl-12 text-white hoverable">Contato</Link>
                         </div>
                     </div>
 
@@ -125,7 +129,7 @@ export default function Home() {
                 </div>
 
                 <div className="text-base mt-12">
-                    {/* Carrossel com alguns ícones (Slider) */}
+                    {/* Carrossel com alguns ícones (Slider) Mobile*/}
                     <section className="flex justify-center md:hidden">
                         <Slider images={sliderImages} />
                     </section>
@@ -207,7 +211,7 @@ export default function Home() {
                                     <span className="font-bold">.</span> Liderança no desenvolvimento de um sistema para filtragem e verificação de documentos, impactando mais de 10 mil registros.
                                 </li>
                             </ul>
-                            <div className="flex items-center gap-2 mt-6">
+                            <div className="flex items-center gap-2 mt-6 hoverable">
                                 <Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} />
                                 <div>
                                     <h3 className="font-semibold">CPTM</h3>
@@ -233,7 +237,7 @@ export default function Home() {
                                     <span className="font-bold text-xl">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.
                                 </li>
                             </ul>
-                            <div className="flex items-center gap-2 mt-6">
+                            <div className="flex items-center gap-2 mt-6 hoverable">
                                 <Image src="/Xerox_logo.svg" alt="Xerox Corporation" width={50} height={50} />
                                 <div>
                                     <h3 className="font-semibold">Xerox Corporation</h3>
@@ -256,18 +260,22 @@ export default function Home() {
                                 className="flex gap-6
  mt-2 md:gap-8"
                             >
-                                <a href="https://github.com/TiagoLucas-dev" target="_blank">
+                                <div className="hoverable">
+                                <a href="https://github.com/TiagoLucas-dev" target="_blank" >
                                     <Image src="/social/github.svg" alt="Github" width={35} height={35} />
-                                </a>
-                                <a href="https://wa.me/5511964775051" target="_blank">
+                                </a> </div>
+<div className="hoverable">
+                                <a href="https://wa.me/5511964775051" target="_blank" >
                                     <Image src="/social/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
-                                </a>
-                                <a href="mailto:titi020604@gmail.com">
+                                </a> </div>
+<div className="hoverable">
+                                <a href="mailto:titi020604@gmail.com" >
                                     <Image src="/social/gmail.svg" alt="Gmail" width={35} height={35} />
-                                </a>
-                                <a href="https://www.linkedin.com/in/tiagolucasdasilva/" target="blank">
+                                </a> </div>
+<div className="hoverable">
+                                <a href="https://www.linkedin.com/in/tiagolucasdasilva/" target="blank" >
                                     <Image src="/social/linkedin.svg" alt="LinkedIn" width={35} height={35} />
-                                </a>
+                                </a> </div>
                             </div>
                         </section>
 
