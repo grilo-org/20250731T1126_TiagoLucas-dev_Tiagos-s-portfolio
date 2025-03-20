@@ -1,21 +1,31 @@
-'use client'
+'use client';
 
 import { useRef, useEffect } from 'react';
 
+interface Particle {
+    x: number;
+    y: number;
+    vx: number;
+    vy: number;
+    radius: number;
+}
+
 export default function Background() {
-    const canvasRef = useRef(null);
+    const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
-        const ctx = canvas.getContext('2d');
+        if (!canvas) return; // Garantia de que o canvas existe
+
+        const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
 
         // Define dimensões do canvas conforme a janela
         let width = (canvas.width = window.innerWidth);
         let height = (canvas.height = window.innerHeight);
 
-        // Configuração de partículas (exemplo)
+        // Configuração de partículas
         const numParticles = 20;
-        let particles = [];
+        let particles: Particle[] = [];
 
         // Função para inicializar as partículas
         function initParticles() {
@@ -67,17 +77,15 @@ export default function Background() {
         };
         window.addEventListener('resize', handleResize);
 
+        // Limpeza: remove o listener ao desmontar o componente
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
 
     return (
-        
-            <div className="z-[-1] fixed opacity-50
-
-">
-                <canvas ref={canvasRef}/>
-            </div>
+        <div className="z-[-1] fixed opacity-50">
+            <canvas ref={canvasRef} />
+        </div>
     );
 }

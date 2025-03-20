@@ -1,6 +1,7 @@
 import { List } from '@phosphor-icons/react/dist/ssr';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import Form from './components/Form';
 import Techs from './components/Techs';
 import Slider from './components/Slider';
@@ -10,12 +11,12 @@ import LatestProjectsSlider from './components/LatestProjectsSlider';
 
 export default function Home() {
     const sliderImages = [
-        <Image src="/python.svg" alt="Python" width={125} height={125} />,
-        <Image src="/javascript.svg" alt="JavaScript" width={125} height={125} />,
-        <Image src="/nextjs-icon.svg" alt="Next.js" width={125} height={125} />,
-        <Image src="/react.svg" alt="React" width={125} height={125} />,
-        <Image src="/tailwindCss.svg" alt="Tailwind CSS" width={125} height={125} />,
-        <Image src="/styled-components.svg" alt="Styled Components" width={125} height={125} />
+        <Image src="/python.svg" alt="Python" width={125} height={125} key="1"/>,
+        <Image src="/javascript.svg" alt="JavaScript" width={125} height={125} key="2"/>,
+        <Image src="/nextjs-icon.svg" alt="Next.js" width={125} height={125} key="3"/>,
+        <Image src="/react.svg" alt="React" width={125} height={125} key="4"/>,
+        <Image src="/tailwindCss.svg" alt="Tailwind CSS" width={125} height={125} key="5"/>,
+        <Image src="/styled-components.svg" alt="Styled Components" width={125} height={125} key="6"/>
     ];
 
     const latestProjects = [
@@ -60,7 +61,7 @@ export default function Home() {
 "
             >
                 <h2 className="text-xl font-medium">
-                    <a href="/">Tiago Lucas.dev</a>
+                    <Link href="/">Tiago Lucas.dev</Link>
                 </h2>
 
                 <menu className="block md:hidden">
@@ -160,7 +161,6 @@ export default function Home() {
 "
                         >
                             <LatestProjectsSlider projects={latestProjects} />
-
                         </div>
                         <div className="hidden md:flex ">
                             <LatestProjects projects={latestProjects} />
@@ -171,59 +171,65 @@ export default function Home() {
                 <div className="mt-12 flex items-center flex-col ">
                     <h2
                         className="text-xl
- font-semibold mb-2"
+ font-semibold mb-2 md:mb-4"
                     >
                         Experiências Profissionais
                     </h2>
 
-                    <section
-                        className="p-4 bg-gray-200 rounded-lg mb-4
-"
-                    >
-                        <ul
-                            className="w-60 flex items-start flex-col gap-4
+                    <div className="md:flex gap-12">
+                        <section
+                            className="p-4 bg-gray-200 rounded-lg mb-4 flex-col md:flex justify-between
+
 "
                         >
-                            <li className="">
-                                <span className="font-bold">.</span> Automatização do processo de cadastro de documentos através da criação de um RPA, aumentando eficiência operacional.
-                            </li>
+                            <ul
+                                className="w-60 flex items-start flex-col gap-4 
+"
+                            >
+                                <li className="">
+                                    <span className="font-bold">.</span> Automatização do processo de cadastro de documentos através da criação de um RPA, aumentando eficiência operacional.
+                                </li>
 
-                            <li className="">
-                                <span className="font-bold">.</span> Liderança no desenvolvimento de um sistema para filtragem e verificação de documentos, impactando mais de 10 mil registros.
-                            </li>
-                        </ul>
-                        <div className="flex items-center gap-2 mt-6">
-                            <Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} />
-                            <div>
-                                <h3 className="font-semibold">CPTM</h3>
-                                <span>Aluno Aprendiz</span>
+                                <li className="">
+                                    <span className="font-bold">.</span> Liderança no desenvolvimento de um sistema para filtragem e verificação de documentos, impactando mais de 10 mil registros.
+                                </li>
+                            </ul>
+                            <div className="flex items-center gap-2 mt-6">
+                                <Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} />
+                                <div>
+                                    <h3 className="font-semibold">CPTM</h3>
+                                    <span>Aluno Aprendiz</span>
+                                </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
 
-                    <section className="p-4 bg-gray-200 rounded-lg mb-4 ">
-                        <ul
-                            className="w-60 flex items-start flex-col gap-4
+                        <section
+                            className="p-4 bg-gray-200 rounded-lg mb-4 flex-col md:flex justify-between
+
 "
                         >
-                            <li>
-                                <span className="font-bold text-xl">.</span> Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.
-                            </li>
+                            <ul
+                                className="w-60 flex items-start flex-col gap-4
+"
+                            >
+                                <li>
+                                    <span className="font-bold text-xl">.</span> Desenvolvimento Front-End de uma plataforma Low-Code utilizando BPMN.IO.
+                                </li>
 
-                            <li>
-                                <span className="font-bold text-xl">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.
-                            </li>
-                        </ul>
-                        <div className="flex items-center gap-2 mt-6">
-                            <Image src="/Xerox_logo.svg" alt="Xerox Corporation" width={50} height={50} />
-                            <div>
-                                <h3 className="font-semibold">Xerox Corporation</h3>
-                                <span>Desenvolvedor</span>
+                                <li>
+                                    <span className="font-bold text-xl">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.
+                                </li>
+                            </ul>
+                            <div className="flex items-center gap-2 mt-6">
+                                <Image src="/Xerox_logo.svg" alt="Xerox Corporation" width={50} height={50} />
+                                <div>
+                                    <h3 className="font-semibold">Xerox Corporation</h3>
+                                    <span>Desenvolvedor</span>
+                                </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
                 </div>
-
                 <div className="mt-10">
                     <section className="w-72 flex items-start flex-col gap-6">
                         <h2 className="text-xl font-semibold">Vamos trabalhar juntos!</h2>
