@@ -58,7 +58,9 @@ export default function Home() {
 
     return (
         <div className=" mx-7  md:mx-10 mb-24">
+            <div className="hidden md:flex">
                   <CustomCursor />
+            </div>
 
             <header
                 className="flex items-center justify-between py-6 sticky top-0 z-10 bg-white
