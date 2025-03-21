@@ -7,6 +7,7 @@ import Techs from './components/Techs';
 import Slider from './components/Slider';
 import CustomCursor from './components/CustomCursor';
 import TypeAnimations from './components/TypeAnimations';
+import ThemeSwitch from './components/ThemeSwitch';
 import LatestProjects from './components/LatestProjects';
 import LatestProjectsSlider from './components/LatestProjectsSlider';
 
@@ -70,12 +71,15 @@ export default function Home() {
                     <Link href="/">Tiago Lucas.dev</Link>
                 </h2>
 
-                <menu className="block md:hidden">
-                    <List size={32} color="black" weight="bold" />
+                <menu className="flex items-center md:hidden gap-6">
+                    <div className="">
+                        <ThemeSwitch />
+                    </div>
+                        <List size={32} color="black" weight="bold" />
                 </menu>
 
                 <nav className="hidden md:block">
-                    <menu className="flex gap-6 font-semibold">
+                    <menu className="flex gap-6 font-semibold items-center">
                         <li className="cursor-none hoverable">
                             <Link href="#sobre-mim">Sobre mim</Link>
                         </li>
@@ -88,8 +92,13 @@ export default function Home() {
                         <li className="cursor-none hoverable">
                             <Link href="#contato">Contato</Link>
                         </li>
+                <div className="hoverable">
+                    <ThemeSwitch />
+                </div>
                     </menu>
                 </nav>
+
+
             </header>
 
             <main>
@@ -213,8 +222,10 @@ export default function Home() {
                                     <span className="font-bold">.</span> Liderança no desenvolvimento de um sistema para filtragem e verificação de documentos, impactando mais de 10 mil registros.
                                 </li>
                             </ul>
-                            <div className="flex items-center gap-2 mt-6 hoverable">
-                                <Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} />
+                            <div className="flex items-center gap-2 mt-6 ">
+                                <div className="hoverable">
+                                    <Link href="https://www.cptm.sp.gov.br/" ><Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} /> </Link>
+                                </div>
                                 <div>
                                     <h3 className="font-semibold">CPTM</h3>
                                     <span>Aluno Aprendiz</span>
@@ -239,8 +250,10 @@ export default function Home() {
                                     <span className="font-bold text-xl">.</span> Criação de páginas web usando ReactJs e Next em micro-frontends.
                                 </li>
                             </ul>
-                            <div className="flex items-center gap-2 mt-6 hoverable">
-                                <Image src="/Xerox_logo.svg" alt="Xerox Corporation" width={50} height={50} />
+                            <div className="flex items-center gap-2 mt-6 ">
+                                <div className="hoverable">
+                                    <Link href="https://www.xerox.com/pt-br" ><Image src="/Xerox_logo.svg" alt="Xerox Corporation" width={50} height={50} /></Link>
+                                </div>
                                 <div>
                                     <h3 className="font-semibold">Xerox Corporation</h3>
                                     <span>Desenvolvedor</span>
@@ -263,21 +276,21 @@ export default function Home() {
  mt-2 md:gap-8"
                             >
                                 <div className="hoverable">
-                                <a href="https://github.com/TiagoLucas-dev" target="_blank" >
+                                <Link href="https://github.com/TiagoLucas-dev" target="_blank" >
                                     <Image src="/social/github.svg" alt="Github" width={35} height={35} />
-                                </a> </div>
+                                </Link> </div>
 <div className="hoverable">
-                                <a href="https://wa.me/5511964775051" target="_blank" >
+                                <Link href="https://wa.me/5511964775051" target="_blank" >
                                     <Image src="/social/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
-                                </a> </div>
+                                </Link> </div>
 <div className="hoverable">
-                                <a href="mailto:titi020604@gmail.com" >
+                                <Link href="mailto:titi020604@gmail.com" >
                                     <Image src="/social/gmail.svg" alt="Gmail" width={35} height={35} />
-                                </a> </div>
+                                </Link> </div>
 <div className="hoverable">
-                                <a href="https://www.linkedin.com/in/tiagolucasdasilva/" target="blank" >
+                                <Link href="https://www.linkedin.com/in/tiagolucasdasilva/" target="blank" >
                                     <Image src="/social/linkedin.svg" alt="LinkedIn" width={35} height={35} />
-                                </a> </div>
+                                </Link> </div>
                             </div>
                         </section>
 

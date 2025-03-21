@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Epilogue } from "next/font/google";
 import "./globals.css";
+import { Providers } from './providers'
 
 import Background from './components/Background';
 
@@ -31,10 +32,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="pt-BR" className="scroll-smooth">
+      <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
           <body className={`${epilogue.variable} antialiased cursor-none`}>
+            <Providers>
               <Background />
               {children}
+            </Providers>
           </body>
       </html>
   );
