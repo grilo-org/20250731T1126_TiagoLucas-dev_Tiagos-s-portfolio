@@ -9,16 +9,21 @@ const CustomCursor = () => {
   const smallBallRef = useRef(null);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    interface MouseEventWithPage extends MouseEvent {
+      pageX: number;
+      pageY: number;
+    }
+
+    const handleMouseMove = (e: MouseEventWithPage) => {
       gsap.to(bigBallRef.current, {
-        duration: 0.4,
-        x: e.pageX - 15,
-        y: e.pageY - window.scrollY - 15,
+      duration: 0.4,
+      x: e.pageX - 15,
+      y: e.pageY - window.scrollY - 15,
       });
       gsap.to(smallBallRef.current, {
-        duration: 0.1,
-        x: e.pageX - 5,
-        y: e.pageY - window.scrollY - 7,
+      duration: 0.1,
+      x: e.pageX - 5,
+      y: e.pageY - window.scrollY - 7,
       });
     };
 

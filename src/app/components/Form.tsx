@@ -12,8 +12,8 @@ export default function Form() {
 
     const onSubmit = (data: FormData) => {
         const { name, email } = data;
-        const subject = encodeURIComponent('Contato do Formulário');
-        const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}`);
+        const subject = encodeURIComponent('Contato pelo site');
+        const body = encodeURIComponent(`Olá,\n\nMeu nome é ${name} e gostaria de entrar em contato. Seguem meus dados:\n\nNome: ${name}\nEmail: ${email}\n\nAguardo seu retorno.\n\nObrigado!`);
         window.location.href = `mailto:titi020604@gmail.com?subject=${subject}&body=${body}`;
     };
 
