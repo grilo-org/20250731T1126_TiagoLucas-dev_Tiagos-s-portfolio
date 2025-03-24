@@ -49,6 +49,10 @@ export default function Background() {
             particles.forEach((p) => {
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                // Verifica se o modo escuro está ativo
+                const isDark = document.documentElement.classList.contains('dark');
+                // Define a cor da partícula conforme o modo
+                ctx.fillStyle = isDark ? 'white' : 'black';
                 ctx.fill();
             });
 

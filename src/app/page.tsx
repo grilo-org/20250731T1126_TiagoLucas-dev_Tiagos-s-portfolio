@@ -60,14 +60,17 @@ export default function Home() {
     return (
         <div className=" mx-7  md:mx-10 mb-24">
             <div className="hidden md:flex">
-                  <CustomCursor />
+                <CustomCursor />
             </div>
 
             <header
-                className="flex items-center justify-between py-6 sticky top-0 z-10 bg-white
+                className="flex items-center justify-between py-6 sticky top-0 z-10 bg-white dark:bg-neutral-800 -ml-10 -mr-10 pl-10 pr-10
 "
             >
-                <h2 className="text-xl font-medium hoverable">
+                <h2
+                    className="text-xl font-medium hoverable dark:text-white
+"
+                >
                     <Link href="/">Tiago Lucas.dev</Link>
                 </h2>
 
@@ -75,11 +78,11 @@ export default function Home() {
                     <div className="">
                         <ThemeSwitch />
                     </div>
-                        <List size={32} color="black" weight="bold" />
+                    <List size={32} color="black" weight="bold" />
                 </menu>
 
                 <nav className="hidden md:block">
-                    <menu className="flex gap-6 font-semibold items-center">
+                    <menu className="flex gap-6 font-semibold items-center dark:text-white">
                         <li className="cursor-none hoverable">
                             <Link href="#sobre-mim">Sobre mim</Link>
                         </li>
@@ -92,13 +95,11 @@ export default function Home() {
                         <li className="cursor-none hoverable">
                             <Link href="#contato">Contato</Link>
                         </li>
-                <div className="hoverable">
-                    <ThemeSwitch />
-                </div>
+                        <div className="hoverable">
+                            <ThemeSwitch />
+                        </div>
                     </menu>
                 </nav>
-
-
             </header>
 
             <main>
@@ -106,7 +107,7 @@ export default function Home() {
                     className="md:flex justify-between md:h-[26rem]
 "
                 >
-                    <div className="flex flex-col mb-[4.5rem] items-start md:w-xl justify-between">
+                    <div className="flex flex-col mb-[4.5rem] items-start md:w-xl justify-between dark:text-white">
                         <div
                             className=" md:w-3/4 mt-4                         
 
@@ -123,7 +124,9 @@ export default function Home() {
                             </h1>
                             <p className="text-base mb-12">Sempre na busca de novos conhecimentos e melhorar cada vez mais, utilizando as melhores práticas e métodos no desenvolvimento. Prazer... Tiago Lucas 👋</p>
 
-                            <Link href="#contato" className="bg-black pt-4 pr-12 pb-4 pl-12 text-white hoverable">Contato</Link>
+                            <Link href="#contato" className="bg-black pt-4 pr-12 pb-4 pl-12 text-white hoverable dark:text-black dark:bg-white">
+                                Contato
+                            </Link>
                         </div>
                     </div>
 
@@ -144,7 +147,7 @@ export default function Home() {
                     <section className="flex justify-center md:hidden">
                         <Slider images={sliderImages} />
                     </section>
-                    <section className="justify-center hidden md:flex">
+                    <section className="justify-center hidden md:flex dark:bg-gray-300 md:-ml-10 md:-mr-10">
                         <Techs images={sliderImages} />
                     </section>
                 </div>
@@ -154,7 +157,7 @@ export default function Home() {
                         className="flex items-center flex-col w-[37.5rem]
 "
                     >
-                        <h2 className="text-3xl font-semibold scroll-mt-24" id="sobre-mim">
+                        <h2 className="text-3xl font-semibold scroll-mt-24 dark:text-white" id="sobre-mim">
                             Sobre mim
                         </h2>
                         <div className="my-10 ">
@@ -167,7 +170,7 @@ export default function Home() {
                              "
                             />
                         </div>
-                        <div className="bg-gray-200 p-4 text-center rounded-lg">
+                        <div className="bg-gray-300 p-4 text-center rounded-lg">
                             <p>
                                 Sou o Tiago, desenvolvedor de software especializado em soluções web e automação de processos, com domínio em React, HTML, CSS, JavaScript e Python. <br /> <br />
                                 Atuei na CPTM automatizando processos críticos e na Xerox Corporation desenvolvendo micro-frontends com React e Next.js. Busco desafios que impulsionem minhas habilidades e gerem impacto positivo.
@@ -178,7 +181,7 @@ export default function Home() {
 
                 <div>
                     <section className="flex items-center flex-col">
-                        <h2 className="text-3xl font-semibold mb-6 scroll-mt-24 " id="ultimos-projetos">
+                        <h2 className="text-3xl font-semibold mb-6 scroll-mt-24 dark:text-white" id="ultimos-projetos">
                             Últimos projetos
                         </h2>
 
@@ -189,7 +192,7 @@ export default function Home() {
                         >
                             <LatestProjectsSlider projects={latestProjects} />
                         </div>
-                        <div className="hidden md:flex ">
+                        <div className="hidden md:flex dark:text-white">
                             <LatestProjects projects={latestProjects} />
                         </div>
                     </section>
@@ -198,7 +201,7 @@ export default function Home() {
                 <div className="mt-12 flex items-center flex-col ">
                     <h2
                         className="text-xl
- font-semibold mb-2 md:mb-4 scroll-mt-24"
+ font-semibold mb-2 md:mb-4 scroll-mt-24 dark:text-white"
                         id="experiencia"
                     >
                         Experiências Profissionais
@@ -206,7 +209,7 @@ export default function Home() {
 
                     <div className="md:flex gap-12">
                         <section
-                            className="p-4 bg-gray-200 rounded-lg mb-4 flex-col md:flex justify-between
+                            className="p-4 bg-gray-300 rounded-lg mb-4 flex-col md:flex justify-between
 
 "
                         >
@@ -224,7 +227,9 @@ export default function Home() {
                             </ul>
                             <div className="flex items-center gap-2 mt-6 ">
                                 <div className="hoverable">
-                                    <Link href="https://www.cptm.sp.gov.br/" ><Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} /> </Link>
+                                    <Link href="https://www.cptm.sp.gov.br/">
+                                        <Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} />
+                                    </Link>
                                 </div>
                                 <div>
                                     <h3 className="font-semibold">CPTM</h3>
@@ -234,7 +239,7 @@ export default function Home() {
                         </section>
 
                         <section
-                            className="p-4 bg-gray-200 rounded-lg mb-4 flex-col md:flex justify-between
+                            className="p-4 bg-gray-300 rounded-lg mb-4 flex-col md:flex justify-between
 
 "
                         >
@@ -252,7 +257,9 @@ export default function Home() {
                             </ul>
                             <div className="flex items-center gap-2 mt-6 ">
                                 <div className="hoverable">
-                                    <Link href="https://www.xerox.com/pt-br" ><Image src="/Xerox_logo.svg" alt="Xerox Corporation" width={50} height={50} /></Link>
+                                    <Link href="https://www.xerox.com/pt-br">
+                                        <Image src="/Xerox_logo.svg" alt="Xerox Corporation" width={50} height={50} />
+                                    </Link>
                                 </div>
                                 <div>
                                     <h3 className="font-semibold">Xerox Corporation</h3>
@@ -263,8 +270,8 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center">
-                    <div className="mt-10 md: flex flex-col items-center md:w-2/6">
-                        <section className="w-72 flex items-start flex-col gap-6 md:items-center scroll-mt-24" id="contato">
+                    <div className="mt-10 md: flex flex-col items-center md:w-2/6 dark:bg-gray-300  rounded-lg ">
+                        <section className="w-72 flex items-start flex-col gap-6 md:items-center scroll-mt-24 md:pt-6" id="contato">
                             <h2 className="text-xl font-semibold">Vamos trabalhar juntos!</h2>
                             <p>
                                 Olá, eu sou o Tiago 👋
@@ -276,21 +283,25 @@ export default function Home() {
  mt-2 md:gap-8"
                             >
                                 <div className="hoverable">
-                                <Link href="https://github.com/TiagoLucas-dev" target="_blank" >
-                                    <Image src="/social/github.svg" alt="Github" width={35} height={35} />
-                                </Link> </div>
-<div className="hoverable">
-                                <Link href="https://wa.me/5511964775051" target="_blank" >
-                                    <Image src="/social/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
-                                </Link> </div>
-<div className="hoverable">
-                                <Link href="mailto:titi020604@gmail.com" >
-                                    <Image src="/social/gmail.svg" alt="Gmail" width={35} height={35} />
-                                </Link> </div>
-<div className="hoverable">
-                                <Link href="https://www.linkedin.com/in/tiagolucasdasilva/" target="blank" >
-                                    <Image src="/social/linkedin.svg" alt="LinkedIn" width={35} height={35} />
-                                </Link> </div>
+                                    <Link href="https://github.com/TiagoLucas-dev" target="_blank">
+                                        <Image src="/social/github.svg" alt="Github" width={35} height={35} />
+                                    </Link>
+                                </div>
+                                <div className="hoverable">
+                                    <Link href="https://wa.me/5511964775051" target="_blank">
+                                        <Image src="/social/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
+                                    </Link>
+                                </div>
+                                <div className="hoverable">
+                                    <Link href="mailto:titi020604@gmail.com">
+                                        <Image src="/social/gmail.svg" alt="Gmail" width={35} height={35} />
+                                    </Link>
+                                </div>
+                                <div className="hoverable">
+                                    <Link href="https://www.linkedin.com/in/tiagolucasdasilva/" target="blank">
+                                        <Image src="/social/linkedin.svg" alt="LinkedIn" width={35} height={35} />
+                                    </Link>
+                                </div>
                             </div>
                         </section>
 

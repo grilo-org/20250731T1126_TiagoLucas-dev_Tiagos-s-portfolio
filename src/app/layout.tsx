@@ -33,11 +33,11 @@ export default function RootLayout({
 }>) {
   return (
       <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
-          <body className={`${epilogue.variable} antialiased cursor-none`}>
-            <Providers>
-              <Background />
-              {children}
-            </Providers>
+          <body className={`${epilogue.variable} antialiased cursor-none dark:bg-neutral-900`}>
+              <Providers>
+                  <Background />
+                  {children}
+              </Providers>
           </body>
       </html>
   );
