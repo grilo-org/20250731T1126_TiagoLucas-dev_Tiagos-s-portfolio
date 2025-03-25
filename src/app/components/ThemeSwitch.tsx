@@ -25,11 +25,19 @@ export default function ThemeSwitch() {
   )
 
   if (resolvedTheme === 'dark') {
-    return <FiSun onClick={() => setTheme('light')} size={24} color="white" />
+    return (
+      <div onClick={() => setTheme('light')} style={{ display: 'block' }}>
+        <FiSun size={24} color="white" />
+      </div>
+    )
   }
 
   if (resolvedTheme === 'light') {
-    return <FiMoon onClick={() => setTheme('dark')} size={24} color="black" />
+    return (
+      <div onClick={() => setTheme('dark')} style={{ display: 'block' }}>
+        <FiMoon size={24} color="black" />
+      </div>
+    )
   }
 
 }

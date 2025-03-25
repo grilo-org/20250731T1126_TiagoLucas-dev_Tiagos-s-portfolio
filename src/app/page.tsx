@@ -78,7 +78,7 @@ export default function Home() {
                     <div className="">
                         <ThemeSwitch />
                     </div>
-                    <List size={32} color="black" weight="bold" />
+                    <List size={32} color="black" weight="bold" className="dark:fill-white"/>
                 </menu>
 
                 <nav className="hidden md:block">
@@ -270,10 +270,10 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center">
-                    <div className="mt-10 md: flex flex-col items-center md:w-2/6 dark:bg-gray-300  rounded-lg ">
-                        <section className="w-72 flex items-start flex-col gap-6 md:items-center scroll-mt-24 md:pt-6" id="contato">
-                            <h2 className="text-xl font-semibold">Vamos trabalhar juntos!</h2>
-                            <p>
+                    <div className="mt-10 flex flex-col items-center md:w-2/6 dark:bg-gray-300 rounded-lg ">
+                        <section className="w-72 flex items-center flex-col gap-6 md:items-center scroll-mt-24 md:pt-6" id="contato">
+                            <h2 className="text-xl font-semibold mt-6">Vamos trabalhar juntos!</h2>
+                            <p className="text-center">
                                 Olá, eu sou o Tiago 👋
                                 <br />
                                 Entre em contato comigo e vamos bater um papo.
