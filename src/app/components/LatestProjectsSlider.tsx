@@ -37,7 +37,7 @@ export default function LatestProjectsSlider({ projects }: LatestProjectsProps) 
                 <SwiperSlide key={index} className="pb-8 !flex flex-col items-center">
                     <a href={project.link} target="_blank"><Image src={project.imageSrc} alt={project.alt} width={500} height={500} /></a>
                     <h4 className="mt-4 font-semibold">{project.title}</h4>
-                    <p>{project.tag}</p>
+                    <p className="text-center">{project.tag}</p>
                 </SwiperSlide>
             ))}
         </Swiper>

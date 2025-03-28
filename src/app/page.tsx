@@ -78,7 +78,7 @@ export default function Home() {
                     <div className="">
                         <ThemeSwitch />
                     </div>
-                    <List size={32} color="black" weight="bold" className="dark:fill-white"/>
+                    <List size={32} color="black" weight="bold" className="dark:fill-white" />
                 </menu>
 
                 <nav className="hidden md:block">
@@ -187,7 +187,7 @@ export default function Home() {
 
                         {/* Carrossel de projetos (LatestProjects) */}
                         <div
-                            className="w-full flex justify-center items-center rounded-lg md:hidden
+                            className="w-full flex justify-center items-center rounded-lg dark:bg-gray-300 -ml-8 -mr-10 md:hidden
 "
                         >
                             <LatestProjectsSlider projects={latestProjects} />
