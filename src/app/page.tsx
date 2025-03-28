@@ -144,10 +144,10 @@ export default function Home() {
 
                 <div className="text-base mt-12">
                     {/* Carrossel com alguns ícones (Slider) Mobile*/}
-                    <section className="flex justify-center md:hidden">
+                    <section className="flex justify-center dark:bg-gray-300 -ml-8 -mr-10 md:hidden">
                         <Slider images={sliderImages} />
                     </section>
-                    <section className="justify-center hidden md:flex dark:bg-gray-300 md:-ml-10 md:-mr-10">
+                    <section className="justify-center hidden md:flex dark:bg-gray-300 md:-mx-10">
                         <Techs images={sliderImages} />
                     </section>
                 </div>

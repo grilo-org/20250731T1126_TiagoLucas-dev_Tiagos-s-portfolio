@@ -33,7 +33,7 @@ export default function Slider({ images }: SliderProps) {
             onSwiper={(swiper) => console.log(swiper)}
         >
             {images.map((image, index) => (
-                <SwiperSlide key={index} className="pb-8 ">
+                <SwiperSlide key={index} className="pb-8 my-6 ml-2">
                     {image}
                 </SwiperSlide>
             ))}
