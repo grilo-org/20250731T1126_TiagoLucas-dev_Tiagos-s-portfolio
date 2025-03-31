@@ -10,7 +10,6 @@ import ThemeSwitch from './components/ThemeSwitch';
 import LatestProjects from './components/LatestProjects';
 import LatestProjectsSlider from './components/LatestProjectsSlider';
 
-
 export default function Home() {
     const sliderImages = [
         <Image src="/python.svg" alt="Python" width={125} height={125} key="1" />,
@@ -79,7 +78,7 @@ export default function Home() {
                                 Olá, pode me chamar de Tiago Lucas <span className="font-bold text-orange-500">:)</span>
                             </div>
                             <h1
-                                className="text-3xl font-semibold italic mb-6 md:text-6xl
+                                className="text-3xl font-semibold italic mb-6 md:text-6xl md:w-3xs
 "
                             >
                                 &lt; <TypeAnimations /> /&gt;
@@ -93,14 +92,16 @@ export default function Home() {
                     </div>
 
                     <div className="flex justify-center md:mr-12 md:items-center">
-                        <Image
-                            src="/perfil.jpg"
-                            alt="Picture of the author"
-                            width={640}
-                            height={480}
-                            className="m-0 rounded-lg transition duration-400 ease-in-out border-2 border-orange-500
-                            "
-                        />
+                        <div className="relative w-[380px] group">
+                            <Image src="/perfil.jpg" alt="Imagem original" width={640} height={480} className="m-0 rounded-lg transition duration-500 ease-in-out border-2 border-orange-500" />
+                            <Image
+                                src="/perfilHover.png"
+                                alt="Imagem no hover"
+                                width={640}
+                                height={480}
+                                className="absolute top-0 left-0 m-0 rounded-lg transition duration-500 ease-in-out border-2 border-orange-500 opacity-0 group-hover:opacity-100"
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -123,14 +124,25 @@ export default function Home() {
                             Sobre mim
                         </h2>
                         <div className="my-10 ">
-                            <Image
-                                src="/perfilImage.jpg"
-                                alt="Picture of the author"
-                                width={600}
-                                height={300}
-                                className="m-0 rounded-lg transition duration-400 ease-in-out border-2 border-orange-500
+                            <div className="relative w-[20rem] md:w-[37.5rem] group">
+                                <Image
+                                    src="/perfilImage.jpg"
+                                    alt="Picture of the author"
+                                    width={600}
+                                    height={300}
+                                    className="m-0 rounded-lg transition duration-500 ease-in-out border-2 border-orange-500
                              "
-                            />
+                                />
+
+                                <Image
+                                    src="/perfilImageHover.png"
+                                    alt="Picture of the author"
+                                    width={600}
+                                    height={300}
+                                    className="absolute top-0 left-0 m-0 rounded-lg transition duration-500 ease-in-out border-2 border-orange-500 opacity-0 group-hover:opacity-100
+                             "
+                                />
+                            </div>
                         </div>
                         <div className="bg-gray-300 p-4 text-center rounded-lg">
                             <p>
@@ -176,36 +188,6 @@ export default function Home() {
 "
                         >
                             <ul
-                                className="w-60 flex items-start flex-col gap-4 
-"
-                            >
-                                <li className="">
-                                    <span className="font-bold">.</span> Automatização do processo de cadastro de documentos através da criação de um RPA, aumentando eficiência operacional.
-                                </li>
-
-                                <li className="">
-                                    <span className="font-bold">.</span> Liderança no desenvolvimento de um sistema para filtragem e verificação de documentos, impactando mais de 10 mil registros.
-                                </li>
-                            </ul>
-                            <div className="flex items-center gap-2 mt-6 ">
-                                <div className="hoverable">
-                                    <Link href="https://www.cptm.sp.gov.br/">
-                                        <Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} />
-                                    </Link>
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold">CPTM</h3>
-                                    <span>Aluno Aprendiz</span>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section
-                            className="p-4 bg-gray-300 rounded-lg mb-4 flex-col md:flex justify-between
-
-"
-                        >
-                            <ul
                                 className="w-60 flex items-start flex-col gap-4
 "
                             >
@@ -226,6 +208,36 @@ export default function Home() {
                                 <div>
                                     <h3 className="font-semibold">Xerox Corporation</h3>
                                     <span>Desenvolvedor</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section
+                            className="p-4 bg-gray-300 rounded-lg mb-4 flex-col md:flex justify-between
+
+"
+                        >
+                            <ul
+                                className="w-60 flex items-start flex-col gap-4 
+"
+                            >
+                                <li className="">
+                                    <span className="font-bold">.</span> Automatização do processo de cadastro de documentos através da criação de um RPA, aumentando eficiência operacional.
+                                </li>
+
+                                <li className="">
+                                    <span className="font-bold">.</span> Liderança no desenvolvimento de um sistema para filtragem e verificação de documentos, impactando mais de 10 mil registros.
+                                </li>
+                            </ul>
+                            <div className="flex items-center gap-2 mt-6 ">
+                                <div className="hoverable">
+                                    <Link href="https://www.cptm.sp.gov.br/">
+                                        <Image src="/CPTM_(Logo).png" alt="CPTM - Companhia Paulista de Trens Metropolitanos" width={50} height={50} />
+                                    </Link>
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold">CPTM</h3>
+                                    <span>Aluno Aprendiz</span>
                                 </div>
                             </div>
                         </section>
