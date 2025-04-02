@@ -7,7 +7,6 @@ import HeaderMobile from './components/HeaderMobile';
 import Slider from './components/Slider';
 import CustomCursor from './components/CustomCursor';
 import TypeAnimations from './components/TypeAnimations';
-import ThemeSwitch from './components/ThemeSwitch';
 import LatestProjects from './components/LatestProjects';
 import LatestProjectsSlider from './components/LatestProjectsSlider';
 
@@ -70,7 +69,7 @@ export default function Home() {
                 <HeaderMobile />
             </div>
 
-            <main>
+            <main className="mt-4">
                 <div
                     className="md:flex justify-between md:h-[26rem]
 "
