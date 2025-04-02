@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Form from './components/Form';
 import Techs from './components/Techs';
 import Header from './components/Header';
+import HeaderMobile from './components/HeaderMobile';
 import Slider from './components/Slider';
 import CustomCursor from './components/CustomCursor';
 import TypeAnimations from './components/TypeAnimations';
@@ -61,7 +62,13 @@ export default function Home() {
                 <CustomCursor />
             </div>
 
-            <Header />
+            <div className="hidden md:inline">
+                <Header />
+            </div>
+
+            <div className="inline md:hidden">
+                <HeaderMobile />
+            </div>
 
             <main>
                 <div

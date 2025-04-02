@@ -1,13 +1,13 @@
+import { List } from '@phosphor-icons/react/dist/ssr';
 import Link from 'next/link';
 import ThemeSwitch from './ThemeSwitch';
-import Navbar from './Navbar';
 
 
 export default function Header() {
 
   return(            
           <header
-                className="flex items-center justify-between py-6 sticky top-0 z-10 bg-white dark:bg-neutral-800 -ml-10 -mr-10 pl-10 pr-10
+                className="flex items-center justify-between py-6 sticky top-0 z-10 bg-white dark:bg-neutral-800 -mx-10 px-10 border-b border-gray-200
 "
             >
                 <h2
@@ -21,7 +21,7 @@ export default function Header() {
                     <div className="">
                         <ThemeSwitch />
                     </div>
-                    <Navbar />
+      <List size={32} color="black" weight="bold" className="dark:fill-white" />
                 </menu>
 
                 <nav className="hidden md:block">
