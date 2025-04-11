@@ -21,39 +21,43 @@ export default function Home() {
     ];
 
     const latestProjects = [
-        {
-            imageSrc: '/RocketNotes.png',
-            alt: 'RocketNotes',
-            title: 'RocketNotes',
-            tag: 'React.js · Styled-components · Axios · Vite · Netlify',
-            description: 'Descrição',
-            link: 'https://rocketnotes-makeyournotes.netlify.app/'
-        },
-        {
-            imageSrc: '/FocusTimerV2.png',
-            alt: 'FocusTimerV2',
-            title: 'FocusTimerV2',
-            tag: 'React.js · Styled-components · Axios · Vite · Netlify',
-            description: 'Descrição',
-            link: 'https://tiagolucas-dev.github.io/FocusTimerV2/'
-        },
-        {
-            imageSrc: '/Ignite_Timer.png',
-            alt: 'Ignite Timer',
-            title: 'Ignite Timer',
-            tag: 'React.js · Styled-components · Axios · Vite · Netlify',
-            description: 'Descrição',
-            link: 'https://ignite-timer01.netlify.app/'
-        },
-        {
-            imageSrc: '/SpaceCream.png',
-            alt: 'SpaceCream',
-            title: 'SpaceCream',
-            tag: 'React.js · Styled-components · Axios · Vite · Netlify',
-            description: 'Descrição',
-            link: 'https://tiagolucas-dev.github.io/Space-Cream/'
-        }
-    ];
+      {
+        imageSrc: "/RocketNotes.png",
+        alt: "RocketNotes",
+        title: "RocketNotes",
+        tag: "React.js · Styled-components · Axios · Vite · Netlify",
+        description:
+          "RocketNotes, uma aplicação web intuitiva para criação e gerenciamento de notas, inspirada no Google Keep. O projeto foi construído com React e outras tecnologias modernas, proporcionando uma experiência de usuário fluida e responsiva.",
+        link: "https://rocketnotes-makeyournotes.netlify.app/",
+      },
+      {
+        imageSrc: "/FocusTimerV2.png",
+        alt: "FocusTimerV2",
+        title: "FocusTimerV2",
+        tag: "HTML · CSS · Javascript",
+        description:
+          "Desenvolvimento de um site responsivo utilizando a técnica Pomodoro para aumentar a produtividade. O FocusTimerV2 é uma aplicação simples e intuitiva, permitindo aos usuários gerenciar seus ciclos de trabalho e descanso de forma eficiente.",
+        link: "https://tiagolucas-dev.github.io/FocusTimerV2/",
+      },
+      {
+        imageSrc: "/Ignite_Timer.png",
+        alt: "Ignite Timer",
+        title: "Ignite Timer",
+        tag: "React.js · Styled-components · Axios · Zod · React Hook Form",
+        description:
+          "Aplicação web desenvolvida com React e TypeScript para gerenciamento de ciclos de foco utilizando a técnica Pomodoro. O sistema permite criar, iniciar, interromper e acompanhar ciclos de tempo com interface intuitiva e responsiva",
+        link: "https://ignite-timer01.netlify.app/",
+      },
+      {
+        imageSrc: "/SpaceCream.png",
+        alt: "SpaceCream",
+        title: "SpaceCream",
+        tag: "Flex · Grid · Mobile First",
+        description:
+          "Website responsivo com temática de sorveteria desenvolvido como projeto prático de HTML, CSS e responsividade. O layout foi baseado em um desafio de front-end focado em organização visual, uso de variáveis CSS e responsividade.",
+        link: "https://tiagolucas-dev.github.io/Space-Cream/",
+      },
+    ]
 
     return (
         <div className=" mx-7  md:mx-10 mb-24">
