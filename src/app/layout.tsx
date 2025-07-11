@@ -22,7 +22,7 @@ const epilogue = Epilogue({
 });
 
 export const metadata: Metadata = {
-  title: "Portfólio",
+  title: "Portfólio | Tiago Lucas",
   description: "Portfólio do Tiago Lucas",
 }
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
+      <html lang="pt-BR" className="scroll-smooth dark" suppressHydrationWarning>
           <body className={`${epilogue.variable} antialiased cursor-none dark:bg-neutral-900`}>
               <Providers>
                   <Background />
